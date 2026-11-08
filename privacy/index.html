@@ -19,7 +19,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 a{color:var(--accentdark)}[hidden]{display:none!important}
 .top-promo{height:28px;background:#133b61;color:#fff;font-size:11px;display:flex;justify-content:center;align-items:center;gap:12px;font-weight:600;letter-spacing:.01em}
 header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - 1210px)/2));background:#fff;border-bottom:1px solid #dce2e8;position:sticky;top:0;z-index:15;gap:16px}
-.logo{display:inline-flex;align-items:center;color:#174e78;text-decoration:none;white-space:nowrap;font-family:Arial,Helvetica,sans-serif;font-size:26px;font-weight:800;line-height:1;letter-spacing:-.012em}
+.logo{display:inline-flex;align-items:center;text-decoration:none;line-height:1;flex-shrink:0}.logo img{display:block;width:228px;height:auto;max-width:100%}
 .logo:hover{text-decoration:none}
 
 .top-right{display:flex;align-items:center;gap:13px}.top-right a,.text-button{font-size:12px;font-weight:600;text-decoration:none;color:#243b4a;background:transparent;border:0;padding:9px 7px;letter-spacing:0}
@@ -84,7 +84,7 @@ h3{font-size:22px;font-weight:700;line-height:1.25;margin-bottom:9px}
 body.analyst-mode{background:#06110c;color:#e6f4e9}
 body.analyst-mode .top-promo{background:#020905;color:#7edca4;border-bottom:1px solid #14492c;font-family:Consolas,'Courier New',monospace}
 body.analyst-mode header{background:#07150e;border-bottom:1px solid #265538}
-body.analyst-mode .logo{color:#b4eaca}
+body.analyst-mode .logo{background:#fff;border-radius:3px;padding:5px 7px}
 
 body.analyst-mode .phase,body.analyst-mode .text-button{color:#b6d8c3}
 body.analyst-mode .progress{background:#0b2716}
@@ -160,7 +160,7 @@ body.analyst-mode .button:focus-visible{outline-color:#d3ff7c}
 @media(max-width:650px){#studio{padding:22px 14px 50px}.analyst-hero{padding:28px 0 23px}.analyst-hero h2{font-size:2.1rem}.analyst-topline{font-size:9px}.analyst-counters{grid-template-columns:repeat(2,minmax(0,1fr))}.analyst-counters>div:nth-child(2){border-right:0}.analyst-counters>div:nth-child(-n+2){border-bottom:1px solid #24583b}.analyst-counters>div{padding:12px}.console-intro{align-items:start;flex-direction:column}.console-status{font-size:10px}.handoff-log{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.analyst-rain .rain-col,.handoff-bar span,.cursor{animation:none!important}.handoff-bar span{width:100%}}
 @media(max-width:950px){.intro{grid-template-columns:1fr;gap:26px}.scene-head{grid-template-columns:1fr}.store-layout,.studio-layout{grid-template-columns:1fr}.perk-rail{display:grid;grid-template-columns:1fr 1fr;gap:12px}.perk-rail .mission{grid-column:1/-1}.brief{position:static}}
-@media(max-width:650px){.top-promo{height:27px;font-size:10px;padding:0 10px;text-align:center}header{height:65px;padding:0 14px}.logo{font-size:21px}.top-right{gap:4px}.top-right a{display:none}.phase{display:none}.progress{top:65px}.page{padding:25px 14px 55px}.intro{min-height:0}.intro h1{font-size:2.3rem}.scene-head h2{font-size:1.95rem}.retail-subnav{padding:10px}.nav-note{display:none}.categories{padding:9px 10px}.category{padding:5px 7px}.store{padding:0 10px 14px}.store-top h3{font-size:19px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product-details{padding:9px}.perk-rail{grid-template-columns:1fr}.recipients,.explain-steps,.result-layout{grid-template-columns:1fr}.scene-actions{align-items:stretch}.scene-actions .button{width:100%}.cookie-actions{grid-template-columns:1fr}.consent{padding:16px}.consent h2{font-size:20px}.cookie-row{gap:10px}.cookie-copy{max-width:75%}.peek-inner{grid-template-columns:1fr}.peek-art{min-height:150px}}
+@media(max-width:650px){.top-promo{height:27px;font-size:10px;padding:0 10px;text-align:center}header{height:65px;padding:0 14px}.logo img{width:190px}.top-right{gap:4px}.top-right a{display:none}.phase{display:none}.progress{top:65px}.page{padding:25px 14px 55px}.intro{min-height:0}.intro h1{font-size:2.3rem}.scene-head h2{font-size:1.95rem}.retail-subnav{padding:10px}.nav-note{display:none}.categories{padding:9px 10px}.category{padding:5px 7px}.store{padding:0 10px 14px}.store-top h3{font-size:19px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product-details{padding:9px}.perk-rail{grid-template-columns:1fr}.recipients,.explain-steps,.result-layout{grid-template-columns:1fr}.scene-actions{align-items:stretch}.scene-actions .button{width:100%}.cookie-actions{grid-template-columns:1fr}.consent{padding:16px}.consent h2{font-size:20px}.cookie-row{gap:10px}.cookie-copy{max-width:75%}.peek-inner{grid-template-columns:1fr}.peek-art{min-height:150px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 /* V5: actual product photography and less templated retail presentation. */
@@ -197,7 +197,7 @@ body:not(.analyst-mode) .retail-search{background:#fff}
 <body>
 <div class="top-promo" id="topPromo">Free pickup on eligible orders · Basketfield Rewards members save more</div>
 <header>
-  <a class="logo" href="#" id="brand" aria-label="Basketfield, return to introduction">BASKETFIELD</a>
+  <a class="logo" href="#" id="brand" aria-label="Basketfield, return to introduction"><img src="assets/basketfield-logo.webp" alt="Basketfield" width="500" height="91" decoding="async"></a>
   <div class="top-right"><span class="phase" id="phase">Interactive demo · About 4 minutes</span><button type="button" class="text-button" id="cookieSettings" hidden>Cookie preferences</button></div>
 </header>
 <div class="progress" aria-hidden="true"><span id="progress"></span></div>
